@@ -10,13 +10,13 @@ Testing project for React Native
 * Can show large size picture on modal window
 * Can handle networking error
 
-![](https://github.com/xhalexhuang/react-native-test-2018/raw/master/picture/picture03.jpg)
+![](https://github.com/xhalexhuang/react-native-test-hashtag/raw/master/picture/picture03.jpg)
 
-![](https://github.com/xhalexhuang/react-native-test-2018/raw/master/picture/picture04.jpg)
+![](https://github.com/xhalexhuang/react-native-test-hashtag/raw/master/picture/picture04.jpg)
 
-![](https://github.com/xhalexhuang/react-native-test-2018/raw/master/picture/picture05.jpg)
+![](https://github.com/xhalexhuang/react-native-test-hashtag/raw/master/picture/picture05.jpg)
 
-![](https://github.com/xhalexhuang/react-native-test-2018/raw/master/picture/picture06.jpg)
+![](https://github.com/xhalexhuang/react-native-test-hashtag/raw/master/picture/picture06.jpg)
 
 ## Remarks
 #### Initialize Project (for example, create project 'mytest' on c:\rn)
