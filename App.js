@@ -92,7 +92,7 @@ export default class IGFetchTest extends React.Component {
     return (
       <View>
         <TouchableOpacity activeOpacity={0.7} onPress={this.scrollTop.bind(this)}>
-          <Text> Count:{this.state.current_count}/{this.state.total_count}  Page:{this.state.page}  Refresh:{this.state.isRefreshing?'1':'0'}  Load:{this.state.isLoading?'1':'0'}  Footer:{this.state.showFooter}</Text>
+          <Text> Count:{this.state.current_count}/{this.state.total_count}  Page:{this.state.page}  Refresh:{this.state.isRefreshing ? '1' : '0'}  Load:{this.state.isLoading ? '1' : '0'}  Footer:{this.state.showFooter}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -167,17 +167,6 @@ export default class IGFetchTest extends React.Component {
     );
   }
 
-  showGoTopButton() {
-    if (this.state.isShowMessage) {
-      return (
-        <View style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 20 }}>
-          <Text>Sorry, failed to access server!</Text>
-          <Text>Error: {this.state.errorMeassge}</Text>
-        </View>
-      );
-    }
-  }
-
   _handleRefresh = () => {
     this.setState({
       isRefreshing: true,
@@ -196,27 +185,27 @@ export default class IGFetchTest extends React.Component {
         this.fetchData();
       });
     } else {
-        this.setState({
-          showFooter: 2,
-        });
+      this.setState({
+        showFooter: 2,
+      });
     }
   };
 
   _makeFooter = () => {
-    if (this.state.showFooter === 0){
-        return (
-            <View></View>
-        );
-    } else if(this.state.showFooter === 1) {
-        return (
-            <View style={{ justifyContent:'center', margin:10 }}>
-                <ActivityIndicator size="large" />
-            </View>
-        );
-    } else if(this.state.showFooter === 2) {
+    if (this.state.showFooter === 0) {
       return (
-        <View style={{alignItems:'center', justifyContent:'center', margin:20}}>
-            <Text>No more records!</Text>
+        <View />
+      );
+    } else if (this.state.showFooter === 1) {
+      return (
+        <View style={{ justifyContent: 'center', margin: 10 }}>
+          <ActivityIndicator size="large" />
+        </View>
+      );
+    } else if (this.state.showFooter === 2) {
+      return (
+        <View style={{ alignItems: 'center', justifyContent: 'center', margin: 20 }}>
+          <Text>No more records!</Text>
         </View>
       );
     }
@@ -281,11 +270,9 @@ export default class IGFetchTest extends React.Component {
         {this.showButtons()}
         {this.showErrorMessage()}
         {this.showFlatList()}
-        {this.showGoTopButton()}
       </View>
     );
   }
-
 }
 
 // get real size of device screen
